@@ -8,4 +8,5 @@ redirect_from:
 ---
 
 {% include base_path %}
-<object data="Aditya_Deole_CV.pdf" width="1000" height="1000" type='application/pdf'/> 
+ 
+[Aditya_Deole_CV.pdf](https://github.com/user-attachments/files/19655652/Aditya_Deole_CV.pdf)
