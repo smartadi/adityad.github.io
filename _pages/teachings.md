@@ -1,10 +1,10 @@
 ---
-permalink: /teaching/
+permalink: /teachings/
 title: "Teaching"
 author_profile: true
 redirect_from: 
-  - /teaching/
-  - /teaching.md
+  - /teachings/
+  - /teachings.html
 ---
 
 ## AA 101, Fall 2022,  Pre-doctoral Lecturer UW,  
