@@ -12,7 +12,7 @@ For application of a ML based state estimator used for state feedback in navigat
 
 To facilitate this, I designed a modular sim in Unreal Engine which runs Python scripts to interact with a dynamic sim written in MATLAB or python while a thrid script runs the ML algorithm. Ive tested this for space environments where a satellite proximity operations are performed. The satellite is in a Low Earth orbit is trying to rendezvous with a uncontrolled spacecraft.
 
-<img src="https://github.com/smartadi/adityad.github.io/blob/master/images/sim/Screenshot%20(79).png" width="280" height="200"><img src="https://github.com/smartadi/adityad.github.io/blob/master/images/sim/arch2.png" width="280" height="200">
+<img src="./images/sim/Screenshot%20(79).png" width="280" height="200"><img src="https://github.com/smartadi/adityad.github.io/blob/master/images/sim/arch2.png" width="280" height="200">
 
 Currently there are a few UE based sims available commercially, showing the importance of such a tool in research as well as in industry.
 
@@ -45,16 +45,14 @@ The controller makes the entire system passive, which allows us to connect multi
 <img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/distinguish.png" width="280" height="200">
 
 ### single agent
-<img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/sat2.png" width="280" height="200">
-<img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/sat0.png" width="280" height="200">
-<img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/sat_a.PNG" width="280" height="200">
-<img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/sat_c.png" width="280" height="200">
+<img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/sat2.png" width="280" height="200"><img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/sat0.png" width="280" height="200">
+
+<img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/sat_a.PNG" width="280" height="200"><img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/sat_c.png" width="280" height="200">
 
 
 
 ### Multiagent
-<img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/example1.png" width="280" height="200">
-<img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/set_defs.png" width="280" height="200">
+<img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/example1.png" width="280" height="200"><img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/set_defs.png" width="280" height="200">
 
 ## Neuronal Dynamics
 
