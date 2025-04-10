@@ -157,6 +157,11 @@ include:
   - .htaccess
   - _pages
   - files
+  - images
+  - images/sim
+  - images/funnel
+  - images/observability
+  - images/passivity
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
