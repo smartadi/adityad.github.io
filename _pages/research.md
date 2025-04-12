@@ -55,23 +55,13 @@ Here we use keypoint-based CNN which has least uncertainty when illumination is 
 For single agent case we show an example of Target tracking problem where an Ego spacecraft chases a Target by exploiting illumination as it improves its sensor performance. We show that overall state variance is reduced. [See paper](https://arxiv.org/abs/2501.09192). 
 
 
-https://github.com/user-attachments/assets/a7a5b264-dc00-4fd4-b9c5-4c2b3c740f3d
-
-
-
-https://github.com/user-attachments/assets/632619e7-9efd-4d7e-be2d-4ef0a5d69bfd
-
-
-<video src ="../images/observability/obsvidgit.mp4" width=180/></video>
-
-<!--
-<img src="../images/observability/sat2.png" width="280" height="200"><img src="../images/observability/sat0.png" width="280" height="200">
-<img src="../images/observability/sat_a.PNG" width="280" height="200"><img src="../images/observability/sat_c.png" width="280" height="200">
--->
-
 
 
 ### Multiagent
+
+
+https://github.com/user-attachments/assets/185436ec-ebc9-417d-83b1-989ac8ace717
+
 
 The same setup can be optimized even further with a network of sensors, by quantifing the dimenisons where information is missing. The SCP alrogithm is implemented here for multi-agent scenario in a sequential approach.
 <!--
