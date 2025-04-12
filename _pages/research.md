@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 ## Photorealistic Simulation Design for Vision Based Navigation
-For application of a ML based state estimator used for state feedback in navigation systems, a robust simulation environment needs to be designed. I have worked on robust control and trajectory design methods for such systems. To setup these problems, a simulation environment needs to be built which can encorporate realistic visuals and emulate relistic cameras. The simulator needs to be modular enough to work with custom dynamic engines and ML algorithms that can process the image outputs. Finally a robust controller algorithm need to interact with the uncertain ML output and give the best course of action.\
+For application of a ML based state estimator used for state feedback in navigation systems, a robust simulation environment needs to be designed. I have worked on robust control and trajectory design methods for such systems. To setup these problems, a simulation environment needs to be built which can encorporate realistic visuals and emulate relistic cameras. The simulator needs to be modular enough to work with custom dynamic engines and ML algorithms that can process the image outputs. Finally a robust controller algorithm need to interact with the uncertain ML output and give the best course of action.
 
 To facilitate this, I designed a modular sim in Unreal Engine which runs Python scripts to interact with a dynamic sim written in MATLAB or python while a thrid script runs the ML algorithm. Ive tested this for space environments where a satellite proximity operations are performed. The satellite is in a Low Earth orbit is trying to rendezvous with a uncontrolled spacecraft.
 
@@ -33,7 +33,7 @@ We investigated funnel synthesis methods developed by [Reynold et al](https://do
 ### Passivity based control
 [Link to my paper](https://arc.aiaa.org/doi/abs/10.2514/6.2023-2156)
 
-A secondary more general approach not involving nominal trajectories to model ML uncertainty, is to use passivity based models. We use the principle that "a good ML estimator must be passive" ie it should not add extra energy to the outputs. Therefore we model the input-output characteristics of this ML map and use sector bounded non linearities to demonstrate that ML maps can be passive. Then a linear feedback controller can be designed by defining constraints, uncertainties and stability criterions as LMIs and solving for feasibility.
+A more general approach not involving nominal trajectories to model ML uncertainty, is to use passivity based models. We use the principle that "a good ML estimator must be passive" ie it should not add extra energy to the outputs. Therefore we model the input-output characteristics of this ML map and use sector bounded non linearities to demonstrate that ML maps can be passive. Then a linear feedback controller can be designed by defining constraints, uncertainties and stability criterions as LMIs and solving for feasibility.
 
 <img src="../images/passivity/passivity4.png" width="280" height="200"><img src="../images/passivity/Picture1%20(1).png" width="280" height="200"><img src="../images/passivity/trajerror%20(1).png" width="280" height="200">
 
@@ -43,11 +43,19 @@ The controller makes the entire system passive, which allows us to connect multi
 
 
 ## Estimation-aware trajectory planning for set-valued uncertainty
+This is my current work in estimation-aware planning. Paper under review at [Journal of Guidance navigation and Control. ](https://arxiv.org/abs/2501.09192).
+
+I have investigated planning methods when ML-driven estimation is deployed in feedback. We observe that some ML platforms and more generally vision based sensing can have state dependent uncertainties. While following planned trajectories, the increasing uncertainty can cause feedback controllers to fail. So by leveraging the knowledge of the output uncertainty, I designed an algorithm to generate estimation-aware trajectories. Specifically for complex cases where probability distribution of noise may not be known but it can be defined as a bounded set. We leverage concepts of set-based observability to design the trajectories which improve estimation alongside task completion.
 <img src="../images/observability/distinguish.png" width="280" height="200">
 
 ### single agent
-<img src="../images/observability/sat2.png" width="280" height="200"><img src="../images/observability/sat0.png" width="280" height="200">
+For single agent case we show an example of Target tracking problem where an Ego spacecraft chases a Target by exploiting illumination as it improves its sensor performance. We show that overall state variance is reduced. [See paper](https://arxiv.org/abs/2501.09192)
 
+
+https://github.com/user-attachments/assets/9319358f-9748-42d8-91e5-d8ef830f4781
+
+
+<img src="../images/observability/sat2.png" width="280" height="200"><img src="../images/observability/sat0.png" width="280" height="200">
 <img src="../images/observability/sat_a.PNG" width="280" height="200"><img src="../images/observability/sat_c.png" width="280" height="200">
 
 
