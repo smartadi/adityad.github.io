@@ -72,7 +72,8 @@ The same setup can be optimized even further with a network of sensors, by quant
 <img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/example1.png" width="280" height="200"><img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/set_defs.png" width="280" height="200">
 -->
 
-https://github.com/user-attachments/assets/45d4d722-4434-4150-9d25-2d670486a2b9
+https://github.com/user-attachments/assets/7e601fd4-2a9d-40d7-a34c-87019c0c3201
+
 
 
 ## Neuronal Dynamics
@@ -84,4 +85,11 @@ Exciting Update incoming!!!
 
 I am a big hardware/electronics/robotics nut. I have been working on and supervising some cool educational hardware projects at Rain lab.
 
-I helped build an inhouse drone for trajectory planning at Rain Lab,
+I helped build an inhouse drone for trajectory planning at Rain Lab :smiley:
+
+![q1gif](https://github.com/user-attachments/assets/a80c08b7-b06f-4fdf-9923-0f4bc7cce097)
+
+![q2gif](https://github.com/user-attachments/assets/4383cf36-f847-4339-88a6-fba42f1a3142)
+
+
+
