@@ -52,22 +52,15 @@ Here we use keypoint-based CNN which has least uncertainty when illumination is 
 <img src="../images/observability/distinguish.png" width="280" height="200">
 
 ### single agent
-For single agent case we show an example of Target tracking problem where an Ego spacecraft chases a Target by exploiting illumination as it improves its sensor performance. We show that overall state variance is reduced. [See paper](https://arxiv.org/abs/2501.09192). 
+For single agent case we show an example of Target tracking problem where an Ego spacecraft chases a Target by exploiting illumination as it improves its sensor performance. We show that overall state variance is reduced. [See paper](https://arxiv.org/abs/2501.09192).
 
-
+![obsgif1](https://github.com/user-attachments/assets/e39cee1a-5bff-4ee3-a62f-dea134f56879)
 
 
 ### Multiagent
-
-
-https://github.com/user-attachments/assets/185436ec-ebc9-417d-83b1-989ac8ace717
-
-
 The same setup can be optimized even further with a network of sensors, by quantifing the dimenisons where information is missing. The SCP alrogithm is implemented here for multi-agent scenario in a sequential approach.
-<!--
-<img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/example1.png" width="280" height="200"><img src="https://github.com/smartadi/adityad.github.io/blob/master/images/observability/set_defs.png" width="280" height="200">
--->
-<video src ="../images/observability/obsmultiagentvideos.mp4" width=180/></video>
+
+![obsgif2](https://github.com/user-attachments/assets/e8c5a74d-4c4b-4410-9cfe-2035541c15e8)
 
 
 ## Neuronal Dynamics
