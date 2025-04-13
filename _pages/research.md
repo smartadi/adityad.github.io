@@ -74,13 +74,21 @@ Exciting Update incoming!!!
 -->
 ## Hardware Projects
 
-I am a big hardware/electronics/robotics nut. I have been working on and supervising some cool educational hardware projects at Rain lab.
+I am a big hardware/electronics/robotics nut. I have been working on and supervising some cool educational hardware projects at Rain lab. Take a look:::
 
-I helped build an inhouse drone for trajectory planning at Rain Lab :smiley:
+- [Visit the Page for ROS2 enabled ground-robot platform for testing trajectory optimization](https://github.com/Rainlabuw/Johnny_demos)
+- PNT project with mobile robots where we built our own positioning system for mobile robots. 
+- Crafyflie 2 for trajectory optimization
+
+
+
+I also helped build an inhouse drone for trajectory planning at Rain Lab :smiley:
 
 ![q1gif](https://github.com/user-attachments/assets/a80c08b7-b06f-4fdf-9923-0f4bc7cce097)
 
 ![q2gif](https://github.com/user-attachments/assets/4383cf36-f847-4339-88a6-fba42f1a3142)
+
+
 
 
 
