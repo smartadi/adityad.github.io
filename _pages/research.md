@@ -56,6 +56,7 @@ For single agent case we show an example of Target tracking problem where an Ego
 
 ![obsgif1](https://github.com/user-attachments/assets/e39cee1a-5bff-4ee3-a62f-dea134f56879)
 
+We also presented an MPC approach to solving this problem to design optimized observability based trajectories on the fly. [See the paper.](https://arc.aiaa.org/doi/abs/10.2514/6.2024-0947) 
 
 ### Multiagent
 The same setup can be optimized even further with a network of sensors, by quantifing the dimenisons where information is missing. The SCP alrogithm is implemented here for multi-agent scenario in a sequential approach.
@@ -63,7 +64,6 @@ The same setup can be optimized even further with a network of sensors, by quant
 ![obsgif2](https://github.com/user-attachments/assets/e8c5a74d-4c4b-4410-9cfe-2035541c15e8)
 
 
-We also presented an MPC approach to solving this problem to design optimized observability based trajectories on the fly. [See the paper.](https://arc.aiaa.org/doi/abs/10.2514/6.2024-0947) 
 
 
 
