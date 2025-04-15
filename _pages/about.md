@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD candidate working in Control Theory under Prof. Mesbahi at the Dept. of Aeronautics &
+Hi, I am a PhD candidate working in Control Theory under Prof. Mesbahi at the Dept. of Aeronautics &
 Astronautics, UW. I am seeking employment opportunities with research in robotics and controls, with
 a focus on navigation and estimation. My past research focused on controller synthesis methods and
 estimation-aware trajectory optimization for vision-guided navigation. I have investigated methods in
