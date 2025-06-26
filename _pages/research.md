@@ -90,7 +90,7 @@ I am a big hardware/electronics/robotics nut. I have been working on and supervi
 
 
 
-I also helped build an inhouse drone for trajectory planning at Rain Lab :smiley:
+I also helped build an inhouse drone for trajectory planning at Rain Lab :smiley: ::
 
 ![q1gif](https://github.com/user-attachments/assets/a80c08b7-b06f-4fdf-9923-0f4bc7cce097)
 
