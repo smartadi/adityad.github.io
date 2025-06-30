@@ -25,3 +25,11 @@ NEWS: Defended my Thesis::
 
 [![PhD Post](https://media.licdn.com/dms/image/v2/D4E22AQHk5w3e3VVlUw/feedshare-shrink_800/B4EZdB1Y_ZH0Ag-/0/1749156205377?e=1753920000&v=beta&t=AMqxzpff9Lw2Z6qrD3vgWjh1q-U1XqjTNZnONcoTqZ4)](https://www.linkedin.com/posts/uwaeroastro_check-out-aditya-deoles-research-and-phd-activity-7336542345682698240-2bHG?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc)
 
+
+
+
+
+Graduate Showcase 2025 ::
+
+[![Grad Week](https://media.licdn.com/dms/image/v2/D5622AQFiz_jvZ59H5g/feedshare-shrink_800/B56Zezq9EOHUAk-/0/1751066071886?e=1753920000&v=beta&t=s_99UQRECKRns9pEOOXUhvV3nP3H6V8jnrhs0kyPMkI)](https://www.linkedin.com/posts/uwaeroastro_spotlight-on-aditya-deoles-research-presented-activity-7345511465841266688-uCPS?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc)
+
