@@ -21,16 +21,38 @@ projects at the RAIN Lab.
 
 ======
 
-NEWS: Defended my Thesis:: 
+NEWS:
+Poster Presentation at NeuroAI::
 
-[![PhD Post](https://media.licdn.com/dms/image/v2/D4E22AQHk5w3e3VVlUw/feedshare-shrink_800/B4EZdB1Y_ZH0Ag-/0/1749156205377?e=1753920000&v=beta&t=AMqxzpff9Lw2Z6qrD3vgWjh1q-U1XqjTNZnONcoTqZ4)](https://www.linkedin.com/posts/uwaeroastro_check-out-aditya-deoles-research-and-phd-activity-7336542345682698240-2bHG?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc)
+<img src="https://github.com/smartadi/adityad.github.io/blob/master/images/IMG_3991.jpg" width="300">
 
 
+Defended my Thesis:: 
 
+<!-- [![PhD Post](https://media.licdn.com/dms/image/v2/D4E22AQHk5w3e3VVlUw/feedshare-shrink_800/B4EZdB1Y_ZH0Ag-/0/1749156205377?e=1753920000&v=beta&t=AMqxzpff9Lw2Z6qrD3vgWjh1q-U1XqjTNZnONcoTqZ4)](https://www.linkedin.com/posts/uwaeroastro_check-out-aditya-deoles-research-and-phd-activity-7336542345682698240-2bHG?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc)
+
+[![PhD Post](/images/adityaphd.jpeg)](https://www.linkedin.com/posts/uwaeroastro_check-out-aditya-deoles-research-and-phd-activity-7336542345682698240-2bHG?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc)
+-->
+<a href="https://www.linkedin.com/posts/uwaeroastro_check-out-aditya-deoles-research-and-phd-activity-7336542345682698240-2bHG?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc">
+  <img src="https://github.com/smartadi/adityad.github.io/blob/master/images/adityaphd.jpeg" width="300"/>
+</a>
 
 
 Graduate Showcase 2025 ::
-
+<!--
 [![Grad Week](https://media.licdn.com/dms/image/v2/D5622AQFiz_jvZ59H5g/feedshare-shrink_800/B56Zezq9EOHUAk-/0/1751066071886?e=1753920000&v=beta&t=s_99UQRECKRns9pEOOXUhvV3nP3H6V8jnrhs0kyPMkI)](https://www.linkedin.com/posts/uwaeroastro_spotlight-on-aditya-deoles-research-presented-activity-7345511465841266688-uCPS?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc)
+-->
 
-<img src="../images/hardware/quad1.png" width="200" height="200">
+<a href="https://www.linkedin.com/posts/uwaeroastro_spotlight-on-aditya-deoles-research-presented-activity-7345511465841266688-uCPS?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc">
+  <img src="https://github.com/smartadi/adityad.github.io/blob/master/images/adityasharc.jpeg" width="300"/>
+</a>
+
+Robotics at Rain Lab::
+
+<img src="../images/hardware/quad1.png" width="200" height="200"> <img src="../images/hardware/johnny.png" width="200" height="200">
+
+<img src="../images/hardware/pic.png" width="200" height="200">
+
+Spacecraft Simulation Platform::
+
+<img src="../images/sim/Screenshot (79).png" width="400" height="300">
