@@ -27,15 +27,14 @@ projects at the RAIN Lab.
 
 NEWS:
 Poster Presentation at NeuroAI::
-<img src="https://github.com/smartadi/adityad.github.io/blob/master/images/IMG_3991.jpg" width="300">
 
 <img src="./images/IMG_3991.jpg" width="300">
 
-<!--
+
 Defended my Thesis:: 
 
 <a href="https://www.linkedin.com/posts/uwaeroastro_check-out-aditya-deoles-research-and-phd-activity-7336542345682698240-2bHG?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc">
-  <img src="../images/adityaphd.jpeg" width="300">
+  <img src="./images/adityaphd.jpeg" width="300">
 </a>
 
 
@@ -45,16 +44,16 @@ Graduate Showcase 2025 ::
 
 
 <a href="https://www.linkedin.com/posts/uwaeroastro_spotlight-on-aditya-deoles-research-presented-activity-7345511465841266688-uCPS?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc">
-  <img src="../images/adityasharc.jpeg" width="300">
+  <img src="./images/adityasharc.jpeg" width="300">
 </a>
 
 Robotics at Rain Lab::
 
-<img src="../images/hardware/quad1.png" width="200" height="200"> <img src="../images/hardware/johnny.png" width="200" height="200">
+<img src="./images/hardware/quad1.png" width="200" height="200"> <img src="./images/hardware/johnny.png" width="200" height="200">
 
-<img src="../images/hardware/pic.png" width="200" height="200">
+<img src="./images/hardware/pic.png" width="200" height="200">
 
 Spacecraft Simulation Platform::
 
-<img src="../images/sim/Screenshot (79).png" width="400" height="300">
--->
+<img src="./images/sim/Screenshot (79).png" width="400" height="300">
+
