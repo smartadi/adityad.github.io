@@ -98,5 +98,8 @@ I also helped build an inhouse drone for trajectory planning at Rain Lab :smiley
 
 
 
+<a href="https://www.linkedin.com/posts/uwaeroastro_check-out-aditya-deoles-research-and-phd-activity-7336542345682698240-2bHG?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc">
+  <img src="../images/adityaphd.jpeg" width="300">
+</a>
 
 
