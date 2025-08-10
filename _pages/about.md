@@ -20,13 +20,13 @@ projects at the RAIN Lab.
 
 
 ======
-<img src="../images/sim/Screenshot%20(79).png" width="280" height="200"><img src="../images/sim/arch2.png" width="280" height="200">
+<img src="/images/sim/Screenshot%20(79).png" width="280" height="200"><img src="/images/sim/arch2.png" width="280" height="200">
 
 NEWS:
 Poster Presentation at NeuroAI::
 <img src="https://github.com/smartadi/adityad.github.io/blob/master/images/IMG_3991.jpg" width="300">
 
-<img src="../images/IMG_3991.jpg" width="300">
+<img src="/images/IMG_3991.jpg" width="300">
 
 
 Defended my Thesis:: 
