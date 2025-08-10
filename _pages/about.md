@@ -20,7 +20,7 @@ projects at the RAIN Lab.
 
 
 ======
-<img src="../images/sim/Screenshot%20(79).png" width="280" height="200">
+<img src="./images/sim/Screenshot%20(79).png" width="280" height="200">
 
 
 <!--
