@@ -23,16 +23,13 @@ projects at the RAIN Lab.
 
 NEWS:
 Poster Presentation at NeuroAI::
-<!--<img src="../images/passivity/consensus_system.png" width="280" height="200">-->
-<img src="../images/IMG_3991.jpg" width="300">
+
+
+<!--<img src="../images/IMG_3991.jpg" width="300">-->
 
 
 Defended my Thesis:: 
 
-<!-- [![PhD Post](https://media.licdn.com/dms/image/v2/D4E22AQHk5w3e3VVlUw/feedshare-shrink_800/B4EZdB1Y_ZH0Ag-/0/1749156205377?e=1753920000&v=beta&t=AMqxzpff9Lw2Z6qrD3vgWjh1q-U1XqjTNZnONcoTqZ4)](https://www.linkedin.com/posts/uwaeroastro_check-out-aditya-deoles-research-and-phd-activity-7336542345682698240-2bHG?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc)
-
-[![PhD Post](/images/adityaphd.jpeg)](https://www.linkedin.com/posts/uwaeroastro_check-out-aditya-deoles-research-and-phd-activity-7336542345682698240-2bHG?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc)
--->
 <a href="https://www.linkedin.com/posts/uwaeroastro_check-out-aditya-deoles-research-and-phd-activity-7336542345682698240-2bHG?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc">
   <img src="../images/adityaphd.jpeg" width="300"/>
 </a>
