@@ -23,9 +23,9 @@ projects at the RAIN Lab.
 
 NEWS:
 Poster Presentation at NeuroAI::
+<img src="https://github.com/smartadi/adityad.github.io/blob/master/images/IMG_3991.jpg" width="300">
 
-
-<!--<img src="../images/IMG_3991.jpg" width="300">-->
+<img src="../images/IMG_3991.jpg" width="300">
 
 
 Defended my Thesis:: 
