@@ -17,20 +17,21 @@ system identification and manipulation solutions for Neuronal dynamics.
 My main motivation for control theory comes from my background in hardware applications. I
 have been working on autonomous navigation for ground and aerial robots and have supervised robotics
 projects at the RAIN Lab.
-
+<!--For some reason on this page images need to be "./images/"
+-->
 
 ======
-<img src="./images/sim/Screenshot%20(79).png" width="280" height="200">
+<!--<img src="./images/sim/Screenshot%20(79).png" width="280" height="200">
+-->
 
 
-<!--
 NEWS:
 Poster Presentation at NeuroAI::
 <img src="https://github.com/smartadi/adityad.github.io/blob/master/images/IMG_3991.jpg" width="300">
 
-<img src="/images/IMG_3991.jpg" width="300">
+<img src="./images/IMG_3991.jpg" width="300">
 
-
+<!--
 Defended my Thesis:: 
 
 <a href="https://www.linkedin.com/posts/uwaeroastro_check-out-aditya-deoles-research-and-phd-activity-7336542345682698240-2bHG?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc">
