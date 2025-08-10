@@ -22,6 +22,8 @@ projects at the RAIN Lab.
 ======
 <img src="/images/sim/Screenshot%20(79).png" width="280" height="200"><img src="/images/sim/arch2.png" width="280" height="200">
 
+
+<!--
 NEWS:
 Poster Presentation at NeuroAI::
 <img src="https://github.com/smartadi/adityad.github.io/blob/master/images/IMG_3991.jpg" width="300">
@@ -37,9 +39,9 @@ Defended my Thesis::
 
 
 Graduate Showcase 2025 ::
-<!--
+
 [![Grad Week](https://media.licdn.com/dms/image/v2/D5622AQFiz_jvZ59H5g/feedshare-shrink_800/B56Zezq9EOHUAk-/0/1751066071886?e=1753920000&v=beta&t=s_99UQRECKRns9pEOOXUhvV3nP3H6V8jnrhs0kyPMkI)](https://www.linkedin.com/posts/uwaeroastro_spotlight-on-aditya-deoles-research-presented-activity-7345511465841266688-uCPS?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc)
--->
+
 
 <a href="https://www.linkedin.com/posts/uwaeroastro_spotlight-on-aditya-deoles-research-presented-activity-7345511465841266688-uCPS?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc">
   <img src="../images/adityasharc.jpeg" width="300">
@@ -54,3 +56,4 @@ Robotics at Rain Lab::
 Spacecraft Simulation Platform::
 
 <img src="../images/sim/Screenshot (79).png" width="400" height="300">
+-->
