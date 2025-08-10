@@ -31,7 +31,7 @@ Poster Presentation at NeuroAI::
 Defended my Thesis:: 
 
 <a href="https://www.linkedin.com/posts/uwaeroastro_check-out-aditya-deoles-research-and-phd-activity-7336542345682698240-2bHG?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc">
-  <img src="../images/adityaphd.jpeg" width="300"/>
+  <img src="../images/adityaphd.jpeg" width="300">
 </a>
 
 
@@ -41,7 +41,7 @@ Graduate Showcase 2025 ::
 -->
 
 <a href="https://www.linkedin.com/posts/uwaeroastro_spotlight-on-aditya-deoles-research-presented-activity-7345511465841266688-uCPS?utm_source=share&utm_medium=member_desktop&rcm=ACoAABn4GLIBIY-l8NiSMJXGW03Ryx5HSTMDBKc">
-  <img src="../images/adityasharc.jpeg" width="300"/>
+  <img src="../images/adityasharc.jpeg" width="300">
 </a>
 
 Robotics at Rain Lab::
