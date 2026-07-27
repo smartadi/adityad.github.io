@@ -8,5 +8,9 @@ redirect_from:
 ---
 
 {% include base_path %}
- 
-[Aditya_Deole_CV.pdf](https://github.com/user-attachments/files/19655652/Aditya_Deole_CV.pdf)
+
+[<i class="fas fa-file-pdf"></i> Download CV (PDF)]({{ base_path }}/files/Aditya_Deole_CV.pdf){: .btn .btn--info .btn--large}
+
+<object data="{{ base_path }}/files/Aditya_Deole_CV.pdf" type="application/pdf" class="pdf-embed">
+  <p>Your browser can't display embedded PDFs. <a href="{{ base_path }}/files/Aditya_Deole_CV.pdf">Download the CV instead</a>.</p>
+</object>
