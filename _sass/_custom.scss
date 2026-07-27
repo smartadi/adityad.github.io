@@ -1,0 +1,78 @@
+/* ==========================================================================
+   CUSTOM OVERRIDES
+   Imported last in assets/css/main.scss so these rules win over the theme.
+   Uses the theme's --global-* custom properties so both light and dark
+   modes stay consistent.
+   ========================================================================== */
+
+body {
+  font-size: 1.05em;
+  line-height: 1.7;
+}
+
+/* Subhead line under the page title */
+.page__lead {
+  font-size: 1.15em;
+  color: var(--global-text-color-light);
+  margin-top: -0.5em;
+  margin-bottom: 1.5em;
+}
+
+.page__content {
+  p,
+  li {
+    line-height: 1.7;
+  }
+
+  /* Keep line lengths readable */
+  p {
+    max-width: 68ch;
+  }
+
+  h2 {
+    margin-top: 2em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--global-border-color);
+  }
+
+  img {
+    border-radius: 6px;
+  }
+
+  figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Demo videos behave like the images: responsive, never overflow */
+  video {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    background: var(--global-border-color);
+  }
+
+  figcaption {
+    font-size: 0.8em;
+    color: var(--global-fig-caption-color);
+    margin-top: 0.5em;
+  }
+}
+
+/* Embedded CV PDF on the /cv/ page */
+.pdf-embed {
+  width: 100%;
+  height: 85vh;
+  min-height: 500px;
+  margin-top: 1.5em;
+  border: 1px solid var(--global-border-color);
+  border-radius: 6px;
+}
+
+/* The theme's dark palette sets --global-fig-caption-color to a dark grey
+   that is unreadable on the dark background; use the light text color there. */
+html[data-theme="dark"] .page__content figcaption {
+  color: var(--global-text-color-light);
+}
