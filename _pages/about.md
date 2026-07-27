@@ -43,6 +43,10 @@ I model the ML uncertainty as bounded sets, define an observability condition on
 
 {% include video src="/videos/estimation-aware-planning.mp4" poster="/videos/estimation-aware-planning.jpg" alt="Side-by-side comparison of nominal and estimation-aware trajectory planning for a satellite rendezvous" caption="Nominal planning takes the shortest path; estimation-aware planning takes the *most observable* one, reducing state variance during rendezvous." %}
 
+With a network of agents the setup improves further, by quantifying the directions in which information is missing and solving the problem sequentially across agents.
+
+{% include video src="/videos/multiagent-estimation-aware.mp4" poster="/videos/multiagent-estimation-aware.jpg" alt="Three agents planning complementary observation paths around a target, with the illumination each one sees" caption="Multi-agent case: each agent takes a complementary path, covering the directions the others leave unobserved — the bottom row shows the illumination conditions each one is exploiting." %}
+
 ### Robotics at the RAIN Lab
 
 I built and supervised educational hardware testbeds for aerial and ground robots, integrating navigation with trajectory-optimization layers.
