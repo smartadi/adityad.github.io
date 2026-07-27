@@ -25,7 +25,7 @@ author:
   avatar           : "ad6.jpg"
   name             : "Aditya Deole"
   pronouns         : # example: "she/her"  
-  bio              : "PhD Candidate, Control Theory"
+  bio              : "PhD, Control Theory"
   location         : "Seattle"
   employer         : "University of Washington"
   uri              : # URL
@@ -188,6 +188,10 @@ exclude:
   - Rakefile
   - README
   - tmp
+  - markdown_generator
+  - scripts
+  - vendor
+  - .bundle
   - vendor
 keep_files:
   - .git
@@ -218,16 +222,7 @@ kramdown:
 
 # These settings control the types of collections used by the template
 collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
   publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
     output: true
     permalink: /:collection/:path/
 
