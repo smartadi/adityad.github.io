@@ -1,0 +1,17 @@
+{% comment %}
+Silent looping demo video — behaves like a GIF but a fraction of the weight.
+Usage:
+  {% include video src="/videos/name.mp4" poster="/videos/name.jpg"
+                   alt="..." caption="..." %}
+Add controls="true" for longer or detail-heavy clips the viewer may want to
+pause or scrub. `muted` and `playsinline` are both required for autoplay on iOS.
+{% endcomment %}
+<figure class="{{ include.class }}">
+  <video autoplay loop muted playsinline preload="metadata"{% if include.controls %} controls{% endif %}
+         {% if include.poster %}poster="{{ include.poster | absolute_url }}"{% endif %}
+         {% if include.alt %}aria-label="{{ include.alt }}"{% endif %}>
+    <source src="{{ include.src | absolute_url }}" type="video/mp4">
+    <p>Your browser can't play this video. <a href="{{ include.src | absolute_url }}">Download it instead</a>.</p>
+  </video>
+  {% if include.caption %}<figcaption>{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>{% endif %}
+</figure>

@@ -1,0 +1,5 @@
+{% capture figure_img %}<img src="{{ include.image_path | absolute_url }}" alt="{% if include.alt %}{{ include.alt }}{% endif %}">{% endcapture %}
+<figure class="{{ include.class }}">
+  {% if include.url %}<a href="{{ include.url }}">{{ figure_img }}</a>{% else %}{{ figure_img }}{% endif %}
+  {% if include.caption %}<figcaption>{{ include.caption | markdownify | remove: "<p>" | remove: "</p>" }}</figcaption>{% endif %}
+</figure>
