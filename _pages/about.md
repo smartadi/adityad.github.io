@@ -34,25 +34,17 @@ My research interests include:
 
 *Current work — Steinmetz Lab and NERD Lab, UW.* Presented at **NeuroAI 2026**, Allen Institute, Seattle, with Anna Li, Eric Shea-Brown, Mehran Mesbahi and Nick Steinmetz. [Slides (PDF)](./files/Deole_NeuroAI2026_slides.pdf)
 
-Cortex-wide activity can be measured, and it can be driven. That makes it a plant — something you can wrap a controller around and ask the usual questions of: what can this input actually reach, how well can this output be tracked, and what does the answer tell you about the system underneath?
+Mesoscale cortical activity carries signals relevant to behavior and perception, and it can be both measured — widefield imaging, cortex-wide — and driven, by targeted optogenetic stimulation. So the question the work is built around is whether it can be *controlled*, with the end goal of shaping behavior itself. Control theory is the right frame for that: it brings robustness, safety guarantees, and energy optimality, instead of stimulation protocols tuned by hand.
 
-**Measure, and act.** Widefield calcium imaging reads activity across the dorsal cortex at 35 Hz, while a steerable laser delivers spatially targeted optogenetic stimulation to a chosen region. The stimulus lands where it is aimed and spreads from there.
+The difficulty is that cortex behaves like a noisy, parameter-varying system. Brain state shifts its resonant frequencies, movement drives global activity, and interactions between regions arrive as unmodelled disturbance, so the same stimulus gives a different answer trial to trial. What makes it tractable is that the *trial-averaged* response is approximately linear — a low-order LTI model explains it, cross-validated — which is enough to design against, provided the controller absorbs the variability the average hides. That is a PI output-feedback loop, running in real time, with gains chosen by optimizing over a cost map rather than by hand.
 
-{% include video src="/videos/cortical-response.mp4" poster="/videos/cortical-response.jpg" alt="Widefield cortical activity map showing a localized response spreading from the optogenetic stimulation site while the laser is on" caption="Cortex-wide ΔF/F during targeted optogenetic stimulation. The response is centred on the stimulation site (ringed) and spreads from there." %}
+{% include video src="/videos/neural-closed-loop.mp4" poster="/videos/neural-closed-loop.jpg" controls="true" alt="Closed-loop optogenetic control dashboard showing widefield cortical activity, laser command, and tracking error across 100 trials" caption="The loop holds ΔF/F in the target region at a −5% set-point. Across 100 trials, closed loop (green) tracks the reference and reduces trial-to-trial variability relative to open loop (red)." %}
 
-**The response is graded, so there is a plant to identify.** Sweeping laser power produces a systematic, repeatable change in the cortical response — the basis for treating the trial-averaged dynamics as a low-order LTI system, cross-validated across trials.
+Given a model of the plant, the same loop can follow a moving reference rather than a fixed one. Feedback corrects the amplitude error, and previewing where the reference is heading recovers the phase that feedback alone loses to plant lag.
 
-{% include video src="/videos/dose-response.mp4" poster="/videos/dose-response.jpg" alt="Cortical response maps as optogenetic laser power increases from 0.4 to 1.8 milliwatts" caption="Dose-response: as laser power sweeps from 0.40 to 1.80 mW, the evoked response grows systematically — an input-output map you can fit a model to." %}
+{% include video src="/videos/moving-reference.mp4" poster="/videos/moving-reference.jpg" controls="true" alt="Feedforward optogenetic control dashboard tracking a moving reference across 199 trials" caption="Tracking a moving reference across 199 trials. Model knowledge lets the controller anticipate the reference instead of chasing it." %}
 
-**Close the loop.** PI output feedback on top of a calibrated feedforward term, running in real time, with gains chosen by optimizing over a cost map rather than tuned by hand. The loop holds the target region at a −5% ΔF/F set-point, improves tracking over open loop, and reduces trial-to-trial variability across sessions.
-
-{% include video src="/videos/neural-closed-loop.mp4" poster="/videos/neural-closed-loop.jpg" controls="true" alt="Closed-loop optogenetic control dashboard showing widefield cortical activity, laser command, and tracking error across 100 trials" caption="Real-time closed-loop control. A PI controller drives ΔF/F in the target ROI to a −5% set-point; across 100 trials, closed loop (green) tracks the reference and reduces trial-to-trial variance relative to open loop (red)." %}
-
-**Then steer it.** The same loop against a moving reference rather than a fixed one. Feedback corrects the amplitude error; adding preview of where the reference is going corrects the phase lag that feedback alone leaves behind.
-
-{% include video src="/videos/moving-reference.mp4" poster="/videos/moving-reference.jpg" controls="true" alt="Feedforward optogenetic control dashboard tracking a moving reference across 199 trials" caption="Tracking a moving reference. A controller with model knowledge can preview where the reference is heading, which recovers the phase that pure feedback loses to plant lag." %}
-
-**What the controller reveals.** Closed-loop performance is itself a measurement. A wrong internal model shows up immediately as tracking error, which makes the controller an instrument for probing the system rather than only a means of driving it: brain state changes how controllable cortex is, with movement improving controllability and synchronization degrading it.
+The controller doubles as a measurement instrument: a wrong internal model shows up immediately as tracking error, so closed-loop performance reads out properties of the system — movement improves controllability, while synchronization degrades it. Next are an explicit disturbance-rejection model, finding the subspaces that are most observable and controllable, and multimodal control across interacting regions — all steps toward closing the loop on behavior.
 
 ### Estimation-aware planning under set-valued uncertainty
 
