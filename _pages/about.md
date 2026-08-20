@@ -12,7 +12,7 @@ redirect_from:
 Aerospace controls PhD turned computational neuroscientist · seeking research scientist roles
 {: .page__lead}
 
-I'm currently **open to research scientist positions** in computational neuroscience, neural engineering, and control of complex dynamical systems. Reach out at [adityad@uw.edu](mailto:adityad@uw.edu) or on [LinkedIn](https://www.linkedin.com/in/aditya-deole-26aab3101).
+I'm currently **open to research scientist positions** in computational neuroscience, neural engineering, and control of complex dynamical systems. Reach out at [aditya.158@gmail.com](mailto:aditya.158@gmail.com) or on [LinkedIn](https://www.linkedin.com/in/aditya-deole-26aab3101).
 {: .notice--info}
 
 [<i class="fas fa-file-pdf"></i> Download my CV](./files/Aditya_Deole_CV.pdf){: .btn .btn--info .btn--large}
@@ -32,13 +32,27 @@ My research interests include:
 
 ### Closed-loop control of neural systems
 
-*Current work — Steinmetz Lab and NERD Lab, UW.*
+*Current work — Steinmetz Lab and NERD Lab, UW.* Presented at **NeuroAI 2026**, Allen Institute, Seattle, with Anna Li, Eric Shea-Brown, Mehran Mesbahi and Nick Steinmetz. [Slides (PDF)](./files/Deole_NeuroAI2026_slides.pdf)
 
-I build real-time feedback controllers that read population neural activity and steer it toward a target. The loop uses widefield calcium imaging as an online state readout and drives a steerable stimulation laser as a function of the animal's brain state, with quantified end-to-end latency.
+Cortex-wide activity can be measured, and it can be driven. That makes it a plant — something you can wrap a controller around and ask the usual questions of: what can this input actually reach, how well can this output be tracked, and what does the answer tell you about the system underneath?
 
-The control-theoretic core is system identification: fitting low-order dynamical models to stimulation-evoked cortical responses, so a controller can be designed rather than hand-tuned. On the µECoG side, I use reachability and controllability analysis to determine which cortical nodes a given stimulation site can actually drive — the same questions that govern where to sense and steer in a trajectory problem, asked of a brain instead of a spacecraft.
+**Measure, and act.** Widefield calcium imaging reads activity across the dorsal cortex at 35 Hz, while a steerable laser delivers spatially targeted optogenetic stimulation to a chosen region. The stimulus lands where it is aimed and spreads from there.
 
-{% include video src="/videos/neural-closed-loop.mp4" poster="/videos/neural-closed-loop.jpg" controls="true" alt="Closed-loop optogenetic control dashboard showing widefield cortical activity, laser command, and tracking error across 100 trials" caption="Real-time closed-loop optogenetic control. A PI controller drives widefield ΔF/F activity in a target ROI to a −5% set-point; across 100 trials, closed-loop (green) tracks the reference and reduces trial-to-trial variance relative to open-loop (red)." %}
+{% include video src="/videos/cortical-response.mp4" poster="/videos/cortical-response.jpg" alt="Widefield cortical activity map showing a localized response spreading from the optogenetic stimulation site while the laser is on" caption="Cortex-wide ΔF/F during targeted optogenetic stimulation. The response is centred on the stimulation site (ringed) and spreads from there." %}
+
+**The response is graded, so there is a plant to identify.** Sweeping laser power produces a systematic, repeatable change in the cortical response — the basis for treating the trial-averaged dynamics as a low-order LTI system, cross-validated across trials.
+
+{% include video src="/videos/dose-response.mp4" poster="/videos/dose-response.jpg" alt="Cortical response maps as optogenetic laser power increases from 0.4 to 1.8 milliwatts" caption="Dose-response: as laser power sweeps from 0.40 to 1.80 mW, the evoked response grows systematically — an input-output map you can fit a model to." %}
+
+**Close the loop.** PI output feedback on top of a calibrated feedforward term, running in real time, with gains chosen by optimizing over a cost map rather than tuned by hand. The loop holds the target region at a −5% ΔF/F set-point, improves tracking over open loop, and reduces trial-to-trial variability across sessions.
+
+{% include video src="/videos/neural-closed-loop.mp4" poster="/videos/neural-closed-loop.jpg" controls="true" alt="Closed-loop optogenetic control dashboard showing widefield cortical activity, laser command, and tracking error across 100 trials" caption="Real-time closed-loop control. A PI controller drives ΔF/F in the target ROI to a −5% set-point; across 100 trials, closed loop (green) tracks the reference and reduces trial-to-trial variance relative to open loop (red)." %}
+
+**Then steer it.** The same loop against a moving reference rather than a fixed one. Feedback corrects the amplitude error; adding preview of where the reference is going corrects the phase lag that feedback alone leaves behind.
+
+{% include video src="/videos/moving-reference.mp4" poster="/videos/moving-reference.jpg" controls="true" alt="Feedforward optogenetic control dashboard tracking a moving reference across 199 trials" caption="Tracking a moving reference. A controller with model knowledge can preview where the reference is heading, which recovers the phase that pure feedback loses to plant lag." %}
+
+**What the controller reveals.** Closed-loop performance is itself a measurement. A wrong internal model shows up immediately as tracking error, which makes the controller an instrument for probing the system rather than only a means of driving it: brain state changes how controllable cortex is, with movement improving controllability and synchronization degrading it.
 
 ### Estimation-aware planning under set-valued uncertainty
 
@@ -75,6 +89,10 @@ I also built and supervised educational hardware testbeds for aerial and ground 
 [See all publications →](./publications/)
 
 ## News
+
+### Talk at NeuroAI 2026, Allen Institute — August 2026
+
+Presented *Closed-loop control of mesoscale cortical activity* at NeuroAI in Seattle, hosted at the Allen Institute. [Slides (PDF)](./files/Deole_NeuroAI2026_slides.pdf)
 
 ### Poster presentation at NeuroAI 2025
 
