@@ -13,7 +13,7 @@ title                    : "Aditya Deole"
 title_separator          : "-"
 name                     : &name "Aditya Deole"
 description              : &description "personal description"
-url                      : https://smartadi.github.io/adityad.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
+url                      : https://adityadeole.com # the base hostname & protocol for your site
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "smartadi/adityad.github.io"
 
