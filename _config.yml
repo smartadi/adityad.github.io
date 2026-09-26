@@ -225,6 +225,15 @@ collections:
   publications:
     output: true
     permalink: /:collection/:path/
+  reviews:
+    output: true
+    permalink: /reviews/:title/
+
+# RSS/Atom feed for reviews, served at /reviews/feed.xml
+feed:
+  collections:
+    reviews:
+      path: "/reviews/feed.xml"
 
 
 # These settings control how pages and collections are included in the site
@@ -274,6 +283,15 @@ defaults:
       author_profile: true
       share: true
       comment: true
+  # _reviews
+  - scope:
+      path: ""
+      type: reviews
+    values:
+      layout: review
+      author_profile: true
+      read_time: true
+      share: true
   # _talks
   - scope:
       path: ""

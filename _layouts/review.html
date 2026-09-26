@@ -1,0 +1,59 @@
+---
+layout: single
+---
+
+{% include base_path %}
+{% assign rating_max = page.rating_max | default: 5 %}
+{% if page.media == "game" %}{% assign media_label = "Game" %}{% else %}{% assign media_label = "Movie" %}{% endif %}
+
+<aside class="review-box" aria-labelledby="review-box-title">
+  <h2 id="review-box-title" class="review-box__title">At a glance</h2>
+  <dl class="review-box__facts">
+    <dt>{{ media_label }}</dt>
+    <dd>{{ page.item_name | default: page.title }}{% if page.year %} ({{ page.year }}){% endif %}</dd>
+    {% if page.creator %}
+      <dt>{% if page.media == "game" %}Developer{% else %}Director{% endif %}</dt>
+      <dd>{{ page.creator }}</dd>
+    {% endif %}
+    {% if page.platform %}
+      <dt>Played on</dt>
+      <dd>{{ page.platform }}</dd>
+    {% endif %}
+    {% if page.rating %}
+      <dt>My rating</dt>
+      <dd>{% include review-rating.html rating=page.rating max=rating_max %}</dd>
+    {% endif %}
+    {% if page.verdict %}
+      <dt>Verdict</dt>
+      <dd>{{ page.verdict }}</dd>
+    {% endif %}
+  </dl>
+</aside>
+
+{% if page.spoilers %}
+<p class="review-spoiler" role="note"><strong>Spoiler warning:</strong> this review discusses plot details.</p>
+{% endif %}
+
+{{ content }}
+
+<p class="review-back"><a href="{{ base_path }}/reviews/">All reviews</a> · <a href="{{ base_path }}/reviews/feed.xml">Subscribe to reviews (RSS)</a></p>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "name": {{ page.title | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "url": "{{ page.url | absolute_url }}",
+  "author": { "@type": "Person", "name": {{ site.author.name | jsonify }}, "url": "{{ site.url }}" },
+  {% if page.verdict %}"reviewBody": {{ page.verdict | jsonify }},{% endif %}
+  {% if page.rating %}"reviewRating": { "@type": "Rating", "ratingValue": {{ page.rating }}, "bestRating": {{ rating_max }}, "worstRating": 0 },{% endif %}
+  "itemReviewed": {
+    "@type": "{% if page.media == 'game' %}VideoGame{% else %}Movie{% endif %}",
+    "name": {{ page.item_name | default: page.title | jsonify }}{% if page.year %},
+    "dateCreated": "{{ page.year }}"{% endif %}{% if page.creator %},
+    {% if page.media == 'game' %}"author": { "@type": "Organization", "name": {{ page.creator | jsonify }} }{% else %}"director": { "@type": "Person", "name": {{ page.creator | jsonify }} }{% endif %}{% endif %}{% if page.media == 'game' and page.platform %},
+    "gamePlatform": {{ page.platform | jsonify }}{% endif %}
+  }
+}
+</script>
