@@ -1,89 +1,280 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# adityadeole.com
 
-![Academic Pages template example](images/homepage.png "Academic Pages template example")
+Personal academic site for Aditya Deole. Jekyll, built on a fork of
+[AcademicPages](https://github.com/academicpages/academicpages.github.io)
+(itself a fork of Minimal Mistakes).
 
-# Getting Started
+| | |
+|---|---|
+| **Live site** | https://adityadeole.com |
+| **Host** | GitHub Pages, from this repo |
+| **Build branch** | `master` — **pushing to it publishes immediately** |
+| **Domain** | Registered at Cloudflare (registrar + DNS only, records unproxied) |
+| **Old URL** | `smartadi.github.io/adityad.github.io` — still redirects here |
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
-
-See more info at https://academicpages.github.io/
-
-## Running locally
-
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
-
-1. Clone the repository and made updates as detailed above.
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distribution and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try run `sudo apt install ruby-dev ruby-bundler nodejs` again.
-
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and open `.gitignore` then add `vendor` inside it.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
-
-```bash
-docker compose up
-```
-
-You should now be able to access the website from `localhost:4000`.
-
-# Maintenance
-
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
-
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
-
-## Bugfixes and enhancements
-
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
-
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+There is no deploy step and no staging environment. GitHub rebuilds the site
+about a minute after any push to `master`, and whatever is on `master` is what
+the public sees. Preview locally before pushing.
 
 ---
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+## Working on a new machine
+
+Everything below is a one-time setup. macOS instructions; on Linux use your
+package manager instead of Homebrew.
+
+### 1. Clone
+
+```bash
+git clone https://github.com/smartadi/adityad.github.io.git
+cd adityad.github.io
+```
+
+### 2. Install Ruby 3.2
+
+The system Ruby on macOS is too old (2.6). Match the version GitHub Pages
+uses:
+
+```bash
+brew install ruby@3.2
+```
+
+Ruby 3.2 does not go on your `PATH` automatically. Either prefix each session
+with the export below, or add it to your `~/.zshrc` permanently:
+
+```bash
+export PATH="/opt/homebrew/opt/ruby@3.2/bin:$PATH"
+```
+
+### 3. Install the gems
+
+```bash
+bundle config set --local path vendor/bundle && bundle install
+```
+
+The `path` setting keeps gems inside `vendor/bundle` in the project rather
+than installing them system-wide. It writes `.bundle/config`, which is
+gitignored, so this step is needed on every new machine.
+
+`Gemfile.lock` is also gitignored (inherited from the upstream template).
+Versions therefore resolve fresh on each machine, which is usually fine since
+`github-pages` pins the whole toolchain — but it means a build that works on
+one machine can in principle differ on another.
+
+### 4. Install ffmpeg, if you will touch video
+
+```bash
+brew install ffmpeg
+```
+
+Only needed for the media workflow below. Skip it for text-only edits.
+
+---
+
+## Everyday workflow
+
+### Preview locally
+
+```bash
+export PATH="/opt/homebrew/opt/ruby@3.2/bin:$PATH" && bundle exec jekyll serve -w --config _config.yml,_config_docker.yml
+```
+
+Then open http://localhost:4000.
+
+- `-w` watches for changes and rebuilds automatically.
+- `_config_docker.yml` blanks `url` so local links resolve against
+  `localhost` instead of the live domain. Always include it locally.
+- **Jekyll does not reload `_config.yml`.** Restart the server after editing
+  it, or your changes silently will not appear.
+
+The repo contains a `docker-compose.yaml` from the upstream template. It is
+unused — the native Ruby setup above is what this site is developed with.
+
+### Publish
+
+```bash
+git add -A && git commit -m "your message" && git push origin master
+```
+
+Wait roughly a minute, then reload the live site. If it does not update,
+check the Actions tab on GitHub for a failed build.
+
+---
+
+## Things that will bite you
+
+These are all real problems that have already happened once.
+
+### Use `absolute_url`, never `relative_url`
+
+Asset URLs are built from `site.url`. `relative_url` produces root-relative
+paths that work perfectly on `localhost` and **404 in production**. This class
+of bug is invisible locally. If you add an include that emits a URL, use
+`absolute_url`.
+
+A useful consequence: because everything uses `absolute_url`, moving the site
+to a new domain is a one-line change to `url` in `_config.yml`.
+
+### Includes have no file extension
+
+`{% include figure %}` looks for `_includes/figure`, not `figure.html`.
+Adding the extension produces a "Could not locate the included file" build
+error.
+
+Custom includes in this repo:
+
+| Include | Purpose |
+|---|---|
+| `figure` | Image with caption. Takes `image_path`, `alt`, `caption`, optional `url` to make it clickable. |
+| `video` | Muted autoplay looping video. Takes `src`, `poster`, `alt`, `caption`, optional `controls="true"` for longer or detail-heavy clips. |
+
+### Liquid runs inside HTML comments
+
+`<!-- {% include foo %} -->` still executes the include; the comment only
+hides the output from the browser. To genuinely disable a block, use
+`{% comment %} ... {% endcomment %}`.
+
+This is why the Publications page rendered empty for a long time while
+placeholder text sat in the page source.
+
+### All custom CSS goes in one file
+
+`_sass/_custom.scss`, imported **last** in `assets/css/main.scss` so it
+overrides the theme cleanly. Do not edit the theme's own partials under
+`_sass/theme/` — changes there are hard to reason about and get lost if the
+theme is ever updated.
+
+Use the theme's CSS custom properties (`--global-text-color`,
+`--global-bg-color`, `--global-border-color`, and so on) rather than hardcoded
+colours, so both light and dark modes stay consistent. Note that the theme's
+dark palette sets `--global-fig-caption-color` to a dark grey that is
+unreadable on its own dark background; `_custom.scss` already overrides this.
+
+**Check both light and dark modes** after any style change — the toggle is in
+the top navigation bar.
+
+---
+
+## Common edits
+
+### Add a publication
+
+Create a file in `_publications/` named `YYYY-MM-DD-short-slug.md`:
+
+```yaml
+---
+title: "Paper Title"
+collection: publications
+category: conferences   # or: manuscripts (journal articles), books
+permalink: /publication/YYYY-short-slug
+date: YYYY-MM-DD
+venue: 'Venue Name'
+paperurl: 'https://doi.org/...'   # omit if none
+citation: '<b>A. Deole</b>, et al. &quot;Title.&quot; <i>Venue</i>, YYYY.'
+---
+```
+
+Category headings are defined under `publication_category` in `_config.yml`.
+Entries sort by date, newest first.
+
+### Add news or a homepage section
+
+Everything on the homepage lives in `_pages/about.md`. It is ordinary
+Markdown — add a `###` heading in the relevant place.
+
+### Add a video
+
+Never commit raw video or GIFs. Convert first:
+
+```bash
+ffmpeg -i input.mov -movflags +faststart -pix_fmt yuv420p -vf "scale=1280:-2" -c:v libx264 -crf 24 -preset slow -an videos/name.mp4
+```
+
+Then generate a poster frame so the page shows a still before playback:
+
+```bash
+ffmpeg -ss 3 -i videos/name.mp4 -vframes 1 -q:v 4 videos/name.jpg
+```
+
+Reference it with the `video` include:
+
+```liquid
+{% include video src="/videos/name.mp4" poster="/videos/name.jpg" alt="..." caption="..." %}
+```
+
+Check the poster is not a blank or title frame — adjust `-ss` if it is.
+
+**Why convert:** GIFs are catastrophic for page weight. The clips on this site
+were originally 6–10 MB GIFs each; as mp4 they are 180–750 KB, and they look
+better. Use `-crf 26` to 28 for dense screen-recorded dashboards, 23 to 24 for
+footage.
+
+### Add images
+
+Resize before committing. Photos straight off a phone are ~10 MB:
+
+```bash
+sips -Z 1600 -s format jpeg -s formatOptions 82 input.png --out images/name.jpg
+```
+
+Avoid spaces and parentheses in filenames — they break in URLs and have
+already caused problems here.
+
+---
+
+## Limits to respect
+
+| Limit | Value |
+|---|---|
+| Repo size | ~1 GB soft limit |
+| Bandwidth | 100 GB/month soft limit |
+| Per-file | 100 MB hard limit |
+
+Long videos — gaming clips, full talk recordings — do **not** belong here.
+Put them on YouTube and embed. The short research demos on this site are
+fine because each is under 4 MB.
+
+---
+
+## Domain and DNS
+
+Registered at Cloudflare. DNS records, all **unproxied** (grey cloud — the
+proxy interferes with GitHub provisioning TLS certificates):
+
+| Type | Name | Value |
+|---|---|---|
+| A | `@` | `185.199.108.153`, `.109.153`, `.110.153`, `.111.153` |
+| AAAA | `@` | `2606:50c0:8000::153` through `:8003::153` |
+| CNAME | `www` | `smartadi.github.io` |
+
+The `CNAME` file in the repo root tells GitHub which domain this repo serves.
+Do not delete it — the site would revert to the github.io URL.
+
+TLS is a Let's Encrypt certificate that GitHub provisions and renews
+automatically.
+
+### Moving to a different host later
+
+The domain is independent of the host. To move to Cloudflare Pages, Netlify or
+anywhere else: point DNS at the new host, update `url` in `_config.yml`, and
+every existing link keeps working. Nothing else is tied to GitHub.
+
+---
+
+## Outstanding
+
+- [ ] **Tick "Enforce HTTPS"** in
+      [Settings → Pages](https://github.com/smartadi/adityad.github.io/settings/pages).
+      Currently `http://adityadeole.com` serves over plain HTTP instead of
+      redirecting. The old github.io URL was on the browser HSTS preload list
+      and could not be reached insecurely; the custom domain gives that up
+      until this is enabled.
+- [ ] Verify the domain under Settings → Pages → Verified domains, to prevent
+      anyone else claiming it on their own Pages site.
+- [ ] Add links for the NeuroAI 2025 and NeurIPS 2025 workshop papers — they
+      lead Selected Publications and are currently plain text.
+- [ ] Set `description` and `og_image` in `_config.yml` so shared links render
+      a preview card instead of a bare URL.
+- [ ] Regenerate the CV PDF with the new domain printed on it.
+- [ ] Teaching page: typo pass, and decide whether referees' names and emails
+      should stay publicly listed.
