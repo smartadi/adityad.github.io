@@ -137,6 +137,13 @@ hides the output from the browser. To genuinely disable a block, use
 This is why the Publications page rendered empty for a long time while
 placeholder text sat in the page source.
 
+### SCSS must be ASCII-only
+
+`jekyll-sass-converter 1.5.2` parses SCSS as US-ASCII. A single non-ASCII
+character anywhere in `_sass/_custom.scss` — an em dash in a comment is
+enough — fails the build with `Invalid US-ASCII character`. Use plain
+hyphens and straight quotes in that file.
+
 ### All custom CSS goes in one file
 
 `_sass/_custom.scss`, imported **last** in `assets/css/main.scss` so it
@@ -260,6 +267,14 @@ anywhere else: point DNS at the new host, update `url` in `_config.yml`, and
 every existing link keeps working. Nothing else is tied to GitHub.
 
 ---
+
+## Branches
+
+`master` is live. Anything else is work in progress.
+
+| Branch | State |
+|---|---|
+| `restyle` | Dark, restrained redesign — name as hero, single accent, dark mode following OS preference. Built and previewable, **not reviewed, not merged**. |
 
 ## Outstanding
 
