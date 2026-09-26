@@ -2,6 +2,21 @@
 
 <!-- start custom head snippets -->
 
+<!-- Follow the visitor's OS light/dark preference unless they've chosen a
+     theme here before. Runs before paint, so there's no flash of the wrong
+     theme. assets/js/_main.js picks this attribute up on load. -->
+<script>
+  (function () {
+    try {
+      if (!localStorage.getItem("theme") &&
+          window.matchMedia &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    } catch (e) { /* private mode or blocked storage — fall back to light */ }
+  })();
+</script>
+
 <!-- favicon from https://commons.wikimedia.org/wiki/File:OOjs_UI_icon_academic-progressive.svg -->
 <link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png"/>
 <link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg"/>

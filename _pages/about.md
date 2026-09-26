@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "Control Theory for Neural Systems"
+title: "Aditya Deole"
 author_profile: true
 redirect_from: 
   - /about/
@@ -9,8 +9,11 @@ redirect_from:
   - /research.html
 ---
 
-Aerospace controls PhD turned computational neuroscientist · seeking research scientist roles
+Control theory · computational neuroscience
 {: .page__lead}
+
+Aerospace controls PhD turned computational neuroscientist, working on closed-loop control of cortical activity.
+{: .page__sub}
 
 I'm currently **open to research scientist positions** in computational neuroscience, neural engineering, and control of complex dynamical systems. Reach out at [aditya.158@gmail.com](mailto:aditya.158@gmail.com) or on [LinkedIn](https://www.linkedin.com/in/aditya-deole-26aab3101).
 {: .notice--info}

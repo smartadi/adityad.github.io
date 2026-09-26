@@ -1,22 +1,106 @@
 /* ==========================================================================
    CUSTOM OVERRIDES
    Imported last in assets/css/main.scss so these rules win over the theme.
-   Uses the theme's --global-* custom properties so both light and dark
-   modes stay consistent.
+   Uses the theme's --global-* custom properties so light and dark stay
+   consistent. Dark mode follows the visitor's OS preference -- see the
+   inline script in _includes/head/custom.html.
    ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Palette
+   One accent, used for links and the single primary action. Everything else
+   is background, text, and a muted text tone.
+   -------------------------------------------------------------------------- */
+
+:root {
+  --accent: #0d7e96;
+  --muted: #5d6b73;
+  --rule: rgba(0, 0, 0, 0.09);
+}
+
+html[data-theme="dark"] {
+  --accent: #4fc3dd;
+  --muted: #9aa7ae;
+  --rule: rgba(255, 255, 255, 0.11);
+
+  /* Softer than the theme's default grey -- less glare, better contrast */
+  --global-bg-color: #16191c;
+  --global-base-color: #16191c;
+  --global-text-color: #e6e9ea;
+  --global-text-color-light: #{'#9aa7ae'};
+  --global-border-color: rgba(255, 255, 255, 0.11);
+  --global-link-color: #4fc3dd;
+  --global-link-color-hover: #7fd8ec;
+  --global-link-color-visited: #4fc3dd;
+  --global-masthead-link-color: #e6e9ea;
+  --global-masthead-link-color-hover: #ffffff;
+}
 
 body {
   font-size: 1.05em;
   line-height: 1.7;
+  background-color: var(--global-bg-color);
 }
 
-/* Subhead line under the page title */
-.page__lead {
-  font-size: 1.15em;
-  color: var(--global-text-color-light);
-  margin-top: -0.5em;
-  margin-bottom: 1.5em;
+/* --------------------------------------------------------------------------
+   Masthead -- quieter, so the name below it leads
+   -------------------------------------------------------------------------- */
+
+.masthead {
+  border-bottom: 1px solid var(--rule);
+
+  .site-title {
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  .greedy-nav {
+    background: transparent;
+
+    a {
+      font-size: 0.82em;
+      letter-spacing: 0.03em;
+    }
+  }
 }
+
+/* --------------------------------------------------------------------------
+   Hero: the name, then a letterspaced role line
+   -------------------------------------------------------------------------- */
+
+.page__title {
+  font-size: 2.6em;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-top: 0.7em;
+  margin-bottom: 0.35em;
+
+  /* The theme underlines links inside headings; the title isn't one */
+  a { text-decoration: none; }
+}
+
+/* Role line -- uppercase and letterspaced does most of the design work */
+.page__lead {
+  font-size: 0.82em;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1.1em;
+}
+
+/* One-line positioning statement under the role */
+.page__sub {
+  font-size: 1.08em;
+  color: var(--muted);
+  max-width: 60ch;
+  margin: 0 0 2em;
+}
+
+/* --------------------------------------------------------------------------
+   Body copy
+   -------------------------------------------------------------------------- */
 
 .page__content {
   p,
@@ -24,15 +108,26 @@ body {
     line-height: 1.7;
   }
 
-  /* Keep line lengths readable */
   p {
     max-width: 68ch;
   }
 
   h2 {
-    margin-top: 2em;
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid var(--global-border-color);
+    margin-top: 2.6em;
+    padding-bottom: 0.35em;
+    border-bottom: 1px solid var(--rule);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    margin-top: 2.2em;
+    font-weight: 650;
+  }
+
+  a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
   }
 
   img {
@@ -42,6 +137,7 @@ body {
   figure {
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 2em;
   }
 
   /* Demo videos behave like the images: responsive, never overflow */
@@ -56,23 +152,128 @@ body {
 
   figcaption {
     font-size: 0.8em;
-    color: var(--global-fig-caption-color);
-    margin-top: 0.5em;
+    color: var(--muted);
+    margin-top: 0.6em;
+    max-width: 68ch;
+    line-height: 1.55;
   }
 }
 
-/* Embedded CV PDF on the /cv/ page */
-.pdf-embed {
-  width: 100%;
-  height: 85vh;
-  min-height: 500px;
-  margin-top: 1.5em;
-  border: 1px solid var(--global-border-color);
-  border-radius: 6px;
+/* --------------------------------------------------------------------------
+   Availability notice -- a flat block with a rule, not a coloured box
+   -------------------------------------------------------------------------- */
+
+.page__content .notice--info {
+  background-color: transparent;
+  border: 0;
+  border-left: 2px solid var(--accent);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0.1em 0 0.1em 1.1em;
+  margin: 0 0 1.8em;
+  font-size: 0.95em;
+  color: var(--global-text-color);
+  max-width: 68ch;
 }
 
-/* The theme's dark palette sets --global-fig-caption-color to a dark grey
-   that is unreadable on the dark background; use the light text color there. */
-html[data-theme="dark"] .page__content figcaption {
-  color: var(--global-text-color-light);
+/* --------------------------------------------------------------------------
+   Buttons -- one filled action, outlined elsewhere
+   -------------------------------------------------------------------------- */
+
+.page__content .btn {
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  box-shadow: none;
+
+  &--info {
+    background-color: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+
+    &:hover {
+      background-color: var(--accent);
+      color: var(--global-bg-color);
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar -- quieter; the theme's Follow button is removed in
+   _includes/author-profile.html
+   -------------------------------------------------------------------------- */
+
+.sidebar {
+  .author__avatar img {
+    max-width: 130px;
+    border-radius: 6px;
+    border: 1px solid var(--rule);
+  }
+
+  .author__name {
+    font-size: 1.05em;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+  }
+
+  .author__bio {
+    font-size: 0.85em;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .author__urls {
+    li {
+      font-size: 0.85em;
+      padding: 0.22em 0;
+      border: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--muted);
+
+      &:hover {
+        color: var(--accent);
+        text-decoration: underline;
+      }
+    }
+
+    .icon-pad-right,
+    i {
+      color: var(--muted);
+      opacity: 0.8;
+    }
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Publications list
+   -------------------------------------------------------------------------- */
+
+.archive__item-title {
+  margin-top: 1.2em;
+  font-weight: 650;
+
+  a { text-decoration: none; }
+}
+
+.page__footer {
+  border-top: 1px solid var(--rule);
+  font-size: 0.85em;
+}
+
+/* --------------------------------------------------------------------------
+   Small screens
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+  .page__title {
+    font-size: 2em;
+  }
+
+  .page__lead {
+    letter-spacing: 0.12em;
+  }
 }
