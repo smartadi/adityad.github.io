@@ -184,6 +184,39 @@ citation: '<b>A. Deole</b>, et al. &quot;Title.&quot; <i>Venue</i>, YYYY.'
 Category headings are defined under `publication_category` in `_config.yml`.
 Entries sort by date, newest first.
 
+### Add a review
+
+Movie and game reviews live in `_reviews/` and are listed at `/reviews/`
+(split into Movies and Games, newest first). Copy the example file
+`_reviews/2026-09-26-example-review.md` to `_reviews/YYYY-MM-DD-short-slug.md`
+and fill in the front matter:
+
+```yaml
+---
+title: "Dune: Part Two review: worth the sand"
+date: YYYY-MM-DD
+media: movie              # movie or game - decides which list it appears in
+item_name: "Dune: Part Two"
+year: 2024
+creator: "Denis Villeneuve" # director, or developer for games
+platform:                 # games only, e.g. "PC (Steam)"
+rating: 4                 # out of 5; set rating_max to change the scale
+verdict: "One sentence a skimmer can act on."
+description: "Under 160 characters, used by search engines and link previews."
+spoilers: false           # true adds a spoiler warning at the top
+header:
+  teaser: name.jpg        # optional image in /images/ for link previews
+---
+```
+
+The example file has `published: false` so it never goes live; remove that
+line from your copy. The URL comes from the filename without the date
+(`/reviews/short-slug/`). New reviews also appear in the reviews feed at
+`/reviews/feed.xml`. The layout is `_layouts/review.html`; it adds the
+"At a glance" box and schema.org `Review` data for search engines.
+
+Gameplay clips go on YouTube and get embedded, per the limits below.
+
 ### Add news or a homepage section
 
 Everything on the homepage lives in `_pages/about.md`. It is ordinary
