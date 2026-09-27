@@ -1,9 +1,9 @@
 ---
 layout: archive
-title: "Reviews"
+title: "Blog"
 permalink: /reviews/
 author_profile: true
-description: "Aditya Deole's reviews of movies and video games: what worked, what didn't, and whether it's worth your time."
+description: "Aditya Deole's blog: reviews of movies and video games, what worked, what didn't, and whether it's worth your time."
 ---
 
 {% include base_path %}
@@ -11,7 +11,7 @@ description: "Aditya Deole's reviews of movies and video games: what worked, wha
 {% assign movies = reviews | where: "media", "movie" %}
 {% assign games = reviews | where: "media", "game" %}
 
-<p>Movies and games I've watched and played, and what I thought of them. New reviews show up in the <a href="{{ base_path }}/reviews/feed.xml">reviews RSS feed</a>.</p>
+<p>Movies and games I've watched and played, and what I thought of them. New posts show up in the <a href="{{ base_path }}/reviews/feed.xml">RSS feed</a>.</p>
 
 <nav aria-label="Review categories">
   <ul class="review-jump">
