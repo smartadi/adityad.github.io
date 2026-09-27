@@ -1,0 +1,10 @@
+{% include base_path %}
+<li class="review-card">
+  <article>
+    <h3 class="review-card__title"><a href="{{ base_path }}{{ include.review.url }}">{{ include.review.title }}</a></h3>
+    <p class="review-card__meta">
+      {% if include.review.rating %}{% include review-rating.html rating=include.review.rating max=include.review.rating_max %} · {% endif %}<time datetime="{{ include.review.date | date_to_xmlschema }}">{{ include.review.date | date: "%B %-d, %Y" }}</time>
+    </p>
+    {% if include.review.verdict %}<p class="review-card__verdict">{{ include.review.verdict }}</p>{% endif %}
+  </article>
+</li>

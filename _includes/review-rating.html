@@ -1,0 +1,3 @@
+{% comment %}Stars are decorative; screen readers get the plain "4 out of 5".{% endcomment %}
+{% assign r = include.rating | plus: 0 %}{% assign m = include.max | default: 5 | plus: 0 %}
+<span class="review-rating"><span class="review-rating__stars" aria-hidden="true">{% for i in (1..m) %}{% if i <= r %}★{% else %}☆{% endif %}{% endfor %}</span> <span class="review-rating__text">{{ include.rating }} out of {{ m }}</span></span>
